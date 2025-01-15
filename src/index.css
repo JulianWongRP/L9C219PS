@@ -1,11 +1,11 @@
-/* base styles */
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  color: #333; /* Slightly darker for better readability */
+  color: #333; 
   background-color: #f5f5f5;
 
   font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
@@ -20,7 +20,7 @@ h1 {
 
 h2 {
   font-size: 1.85rem;
-  color: #757575; /* Subtle gray for better contrast */
+  color: #757575; 
 }
 
 h3 {
@@ -36,12 +36,12 @@ h4 {
 
 h4 + span {
   display: block;
-  margin-bottom: 1.5em; /* Adjusted spacing */
+  margin-bottom: 1.5em; 
 }
 
 p {
   font-size: 1.125rem;
-  line-height: 1.65; /* Slightly increased for better readability */
+  line-height: 1.65; 
   margin-bottom: 1.5em;
 }
 
@@ -59,12 +59,12 @@ ul li {
 /* nav & links */
 a {
   color: #e7212b;
-  transition: color 0.3s ease; /* Smooth color change on hover */
+  transition: color 0.3s ease; 
 }
 
 a:hover {
   text-decoration: none;
-  color: #bf1a24; /* Slightly darker hover color */
+  color: #bf1a24; 
 }
 
 nav a {
@@ -75,7 +75,7 @@ nav a {
   border-bottom: 2px solid transparent;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.3s ease, border-color 0.3s ease; /* Smooth hover effect */
+  transition: color 0.3s ease, border-color 0.3s ease; 
 }
 
 nav a:hover,
@@ -96,7 +96,7 @@ nav a:hover,
 .categories a:hover,
 a.category-active {
   color: #fff;
-  background-color: #504f4f; /* Slightly darker for better contrast */
+  background-color: #504f4f; 
 }
 
 .session a {
@@ -106,15 +106,15 @@ a.category-active {
   border: 1px solid currentColor;
   padding: 0.85em 1.125em;
   border-radius: 3px;
-  transition: color 0.3s ease, border-color 0.3s ease; /* Smooth effect */
+  transition: color 0.3s ease, border-color 0.3s ease; 
 }
 
 .session a:hover,
 a.session-active {
-  color: #3d7f7e; /* Adjusted to a softer green */
+  color: #3d7f7e; 
 }
 
-/* components & assets */
+
 .logo {
   width: 220px;
 }
@@ -135,7 +135,7 @@ ul.session-list {
 }
 
 .session + .session {
-  margin-left: 1.25em; /* Reduced spacing for better alignment */
+  margin-left: 1.25em; 
 }
 
 .session-name {
@@ -155,7 +155,7 @@ form {
 label {
   display: block;
   font-weight: 500;
-  margin-bottom: 1.25em; /* Adjusted spacing */
+  margin-bottom: 1.25em; 
 }
 
 input {
@@ -166,7 +166,7 @@ input {
   padding: 0.5em;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
-  transition: border-color 0.3s ease; /* Smooth focus effect */
+  transition: border-color 0.3s ease; 
 }
 
 input:focus {
@@ -178,9 +178,9 @@ input[type="submit"] {
   color: #fff;
   font-weight: bold;
   padding: 0.65em 0;
-  background-color: #67b7b6; /* Adjusted to a slightly lighter shade */
+  background-color: #67b7b6; 
   border: none;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  transition: background-color 0.3s ease; 
 }
 
 input[type="submit"]:hover {
@@ -210,7 +210,7 @@ header {
 footer.container {
   padding: 2.25em 0;
   margin-top: auto;
-  border-top: 1px solid #dcdcdc; /* Slightly lighter border for footer */
+  border-top: 1px solid #dcdcdc;
 }
 
 .container {
@@ -251,10 +251,32 @@ footer.container {
 
   .categories {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Simplified shorthand */
+    grid-template-columns: repeat(3, 1fr); 
   }
 
   form {
     width: 60%;
   }
+  
+
+
+.arrow {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  transition: transform 0.3s ease; 
+}
+
+
+.arrow.open {
+  transform: rotate(180deg); 
+}
+
+.question h4 {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+  
+  
 }

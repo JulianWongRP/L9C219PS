@@ -7,6 +7,7 @@ import Header from "./Header";
 import Register from "./Register";
 import Session from "./Session";
 import Confirmation from "./Confirmation";
+import FAQ from "./FAQ";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route index element={<h3>Select a category from above</h3>}/>
         </Route>
         <Route path="register" element={<Register/>}/>
+        <Route path="FAQ" element={<FAQ/>}/>
         <Route path="confirmed" element={<Confirmation/>}/>
         <Route
           path="*"
