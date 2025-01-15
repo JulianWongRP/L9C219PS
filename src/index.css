@@ -5,7 +5,9 @@
 
 body {
   margin: 0;
-  color: #222;
+  color: #333; /* Slightly darker for better readability */
+  background-color: #f5f5f5;
+
   font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,12 +15,12 @@ body {
 
 h1 {
   font-size: 2.2rem;
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
 }
 
 h2 {
   font-size: 1.85rem;
-  color: #858585;
+  color: #757575; /* Subtle gray for better contrast */
 }
 
 h3 {
@@ -28,18 +30,18 @@ h3 {
 
 h4 {
   font-size: 1.25rem;
-  color: #525252;
+  color: #4a4a4a;
   margin: 0 0 0.25em;
 }
 
 h4 + span {
   display: block;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.5em; /* Adjusted spacing */
 }
 
 p {
   font-size: 1.125rem;
-  line-height: 1.5;
+  line-height: 1.65; /* Slightly increased for better readability */
   margin-bottom: 1.5em;
 }
 
@@ -55,28 +57,31 @@ ul li {
 }
 
 /* nav & links */
-
 a {
   color: #e7212b;
+  transition: color 0.3s ease; /* Smooth color change on hover */
 }
 
 a:hover {
   text-decoration: none;
+  color: #bf1a24; /* Slightly darker hover color */
 }
 
 nav a {
   display: block;
   font-size: 1.25rem;
-  color: #DD1F26;
+  color: #d31723;
   padding-bottom: 0.15em;
   border-bottom: 2px solid transparent;
   font-weight: 500;
   text-decoration: none;
+  transition: color 0.3s ease, border-color 0.3s ease; /* Smooth hover effect */
 }
 
-nav a:hover, 
+nav a:hover,
 .nav-active {
   color: #5dabaa;
+  border-color: #5dabaa;
 }
 
 .categories a {
@@ -84,26 +89,29 @@ nav a:hover,
   color: #605e5e;
   text-decoration: none;
   padding: 0.25em 0.4em;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.categories a:hover, 
+
+.categories a:hover,
 a.category-active {
   color: #fff;
-  background-color: #605e5e;
-  border-radius: 3px;
+  background-color: #504f4f; /* Slightly darker for better contrast */
 }
 
 .session a {
   display: block;
-  color: rgb(56, 56, 56);
+  color: #383838;
   text-decoration: none;
   border: 1px solid currentColor;
   padding: 0.85em 1.125em;
   border-radius: 3px;
+  transition: color 0.3s ease, border-color 0.3s ease; /* Smooth effect */
 }
 
-.session a:hover, 
+.session a:hover,
 a.session-active {
-  color: #489b9a;
+  color: #3d7f7e; /* Adjusted to a softer green */
 }
 
 /* components & assets */
@@ -127,7 +135,7 @@ ul.session-list {
 }
 
 .session + .session {
-  margin-left: 1.5em;
+  margin-left: 1.25em; /* Reduced spacing for better alignment */
 }
 
 .session-name {
@@ -147,21 +155,22 @@ form {
 label {
   display: block;
   font-weight: 500;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.25em; /* Adjusted spacing */
 }
 
 input {
-  font-size: 1em;
+  font-size: 1rem;
   margin-top: 0.35em;
   display: block;
   width: 100%;
   padding: 0.5em;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
+  transition: border-color 0.3s ease; /* Smooth focus effect */
 }
 
 input:focus {
-  outline-color: #5dabaa;
+  outline-color: #489b9a;
 }
 
 input[type="submit"] {
@@ -169,11 +178,13 @@ input[type="submit"] {
   color: #fff;
   font-weight: bold;
   padding: 0.65em 0;
-  background-color: #75bebd;
+  background-color: #67b7b6; /* Adjusted to a slightly lighter shade */
   border: none;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
+
 input[type="submit"]:hover {
-  background-color: #5dabaa;
+  background-color: #4fa6a5;
 }
 
 /* layout */
@@ -199,7 +210,7 @@ header {
 footer.container {
   padding: 2.25em 0;
   margin-top: auto;
-  border-top: 1px solid rgb(219, 219, 219);
+  border-top: 1px solid #dcdcdc; /* Slightly lighter border for footer */
 }
 
 .container {
@@ -216,27 +227,33 @@ footer.container {
 }
 
 @media (min-width: 768px) {
-  header, 
+  header,
   nav {
     display: flex;
     align-items: center;
-  } 
+  }
+
   header.container {
     margin-bottom: 1em;
   }
+
   nav {
     margin-left: auto;
   }
+
   nav a {
     margin-left: 1.25em;
   }
+
   .nav-active {
     border-bottom: 2px solid currentColor;
   }
+
   .categories {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Simplified shorthand */
   }
+
   form {
     width: 60%;
   }
